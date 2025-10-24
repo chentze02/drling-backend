@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 
 // --- Main API Endpoint ---
-app.post('api/analyze-smile', async (req, res) => {
+app.post('/api/analyze-smile', async (req, res) => {
   const { imageData } = req.body;
   if (!imageData) {
     return res.status(400).json({ error: 'imageData is required.' });
