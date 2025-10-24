@@ -8,7 +8,11 @@ const app = express();
 const port = process.env.PORT || 5001;
 
 // --- Middleware ---
-app.use(cors());
+// Configure CORS to specifically allow your frontend's origin
+const corsOptions = {
+  origin: 'https://drling-frontend.vercel.app' // <-- Your Vercel URL
+};
+app.use(cors(corsOptions));
 app.use(bodyParser.json({ limit: '10mb' }));
 
 // --- Initialize Google GenAI Client ---
