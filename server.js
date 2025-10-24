@@ -18,6 +18,16 @@ if (!API_KEY) {
 }
 const ai = new GoogleGenAI(API_KEY);
 
+// Health Check Endpoint
+app.get('/', (req, res) => {
+  res.status(200).send('Smile API server is running!');
+});
+
+// Main API Endpoint
+app.post('/api/analyze-smile', async (req, res) => {
+  // ... your existing code
+});
+
 // --- Main API Endpoint ---
 app.post('/api/analyze-smile', async (req, res) => {
   const { imageData } = req.body;
