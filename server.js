@@ -23,10 +23,6 @@ app.get('/', (req, res) => {
   res.status(200).send('Smile API server is running!');
 });
 
-// Main API Endpoint
-app.post('/api/analyze-smile', async (req, res) => {
-  // ... your existing code
-});
 
 // --- Main API Endpoint ---
 app.post('/api/analyze-smile', async (req, res) => {
